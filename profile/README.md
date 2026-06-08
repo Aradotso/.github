@@ -11,3 +11,9 @@
 <p align="center">
   <img src="./logo.png" alt="Ara" width="120" />
 </p>
+
+---
+
+<p align="center">
+  Interested in helping? Read our <a href="./CONTRIBUTING.md">Contributing Guidelines</a>.
+</p>
