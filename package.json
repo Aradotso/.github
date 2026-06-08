@@ -1,0 +1,15 @@
+{
+  "name": "aradotso-github-profile",
+  "version": "1.0.0",
+  "description": "Aradotso GitHub organization profile and branding assets",
+  "private": true,
+  "scripts": {
+    "lint": "markdownlint '**/*.md' --ignore node_modules",
+    "format": "prettier --check '**/*.md'",
+    "format:write": "prettier --write '**/*.md'"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.41.0",
+    "prettier": "^3.2.5"
+  }
+}
