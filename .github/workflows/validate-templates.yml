@@ -1,0 +1,43 @@
+name: Validate Templates
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate YAML files
+        run: |
+          python -c '
+          import os, sys, yaml
+          success = True
+          for root, dirs, files in os.walk(".github"):
+              for file in files:
+                  if file.endswith((".yml", ".yaml")):
+                      path = os.path.join(root, file)
+                      print(f"Validating {path}...")
+                      try:
+                          with open(path, "r") as f:
+                              yaml.safe_load(f)
+                      except Exception as e:
+                          print(f"Error in {path}: {e}")
+                          success = False
+          if not success:
+              sys.exit(1)
+          print("All YAML files validated successfully!")
+          '

@@ -1,0 +1,16 @@
+{
+  "name": "Node.js CI",
+  "description": "Standard lint, test, and build CI workflow for Node.js projects using npm, yarn, or pnpm.",
+  "iconName": "node",
+  "categories": [
+    "JavaScript",
+    "Node",
+    "CI"
+  ],
+  "filePatterns": [
+    "package.json",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml"
+  ]
+}
