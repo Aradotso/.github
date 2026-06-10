@@ -1,0 +1,14 @@
+# markdownlint configuration
+# https://github.com/DavidAnson/markdownlint
+
+default: true
+
+# Allow long lines in profile README (contains HTML/image tags)
+MD013: false
+
+# Allow duplicate headings across different files
+MD024:
+  siblings_only: true
+
+# Allow raw HTML (used in profile/README.md for centering)
+MD033: false
