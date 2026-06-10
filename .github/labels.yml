@@ -1,0 +1,44 @@
+# Ara issue labels
+#
+# Apply these to any repo under the Aradotso org.
+# Format: name | color (hex without #) | description
+
+- name: feature
+  color: "0075ca"
+  description: "New capability or improvement"
+
+- name: bug
+  color: "d73a4a"
+  description: "Something is broken or behaving unexpectedly"
+
+- name: dx
+  color: "e4e669"
+  description: "Developer experience improvement"
+
+- name: agent
+  color: "8957e5"
+  description: "Relates to background agent infrastructure"
+
+- name: "milestone:M2"
+  color: "bfd4f2"
+  description: "Agent Reliability milestone"
+
+- name: "milestone:M3"
+  color: "d4c5f9"
+  description: "Intelligence Layer milestone"
+
+- name: "milestone:M4"
+  color: "c2e0c6"
+  description: "Surface & UX milestone"
+
+- name: "milestone:M5"
+  color: "f9d0c4"
+  description: "Ecosystem milestone"
+
+- name: good first issue
+  color: "7057ff"
+  description: "Good starting point for new contributors"
+
+- name: wontfix
+  color: "ffffff"
+  description: "This will not be addressed"

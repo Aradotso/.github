@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ara website
+    url: https://ara.so
+    about: Learn more about Ara
+  - name: Ara documentation
+    url: https://ara.so/docs
+    about: Browse the docs
