@@ -1,0 +1,6 @@
+{
+  "name": "Node.js CI",
+  "description": "Lint, test, and build workflow for Node.js projects in the Aradotso org.",
+  "iconName": "javascript-action",
+  "categories": ["JavaScript", "Node"]
+}
