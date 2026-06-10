@@ -1,0 +1,14 @@
+{
+  "name": "amp-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub org profile for Ara (ara.so)",
+  "scripts": {
+    "lint": "markdownlint 'profile/**/*.md'",
+    "validate": "node scripts/validate-profile.js",
+    "test": "npm run lint && npm run validate"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.39.0"
+  }
+}
