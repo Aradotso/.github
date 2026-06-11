@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokens — Ara Design System</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="components.css" />
+</head>
+<body>
+<div class="showcase-layout">
+  <!-- Sidebar -->
+  <nav class="showcase-sidebar">
+    <a class="sidebar-logo" href="index.html">
+      <span class="sidebar-logo-mark">A</span>
+      <span class="sidebar-logo-text">Design System</span>
+    </a>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Foundation</div>
+      <ul class="sidebar-nav">
+        <li><a href="tokens.html" class="active"><span class="nav-icon">🎨</span> Tokens</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Components</div>
+      <ul class="sidebar-nav">
+        <li><a href="notch.html"><span class="nav-icon">⌨️</span> Notch</a></li>
+        <li><a href="chat.html"><span class="nav-icon">💬</span> Chat</a></li>
+        <li><a href="landing.html"><span class="nav-icon">🌐</span> Landing</a></li>
+        <li><a href="hq.html"><span class="nav-icon">🗄️</span> HQ Admin</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Overview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="showcase-main">
+    <div class="showcase-topbar">
+      <span class="topbar-title">Tokens</span>
+      <span class="topbar-badge">Foundation</span>
+    </div>
+
+    <div class="showcase-content">
+
+      <!-- Color tokens -->
+      <div class="section-header">
+        <h1 class="section-title">Color tokens</h1>
+        <p class="section-description">Design tokens sourced from ara.so, chat.ara.so, and HQ. Each surface has its own palette tuned for its background.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">ara.so — light theme</span>
+          <span class="component-source">AraWeb/ara.so/src/index.css</span>
+        </div>
+        <div class="component-canvas">
+          <div class="token-grid">
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#fcfbf8;border-bottom:1px solid #e7e5e4"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-bg</span><span class="swatch-value">#fcfbf8</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#1c1917"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-text</span><span class="swatch-value">#1c1917</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#78716c"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-text-secondary</span><span class="swatch-value">#78716c</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#a8a29e"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-text-tertiary</span><span class="swatch-value">#a8a29e</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#ffffff;border-bottom:1px solid #e7e5e4"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-surface</span><span class="swatch-value">#ffffff</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#e7e5e4"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-border</span><span class="swatch-value">#e7e5e4</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#16a34a"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-success</span><span class="swatch-value">#16a34a</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#dc2626"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-error</span><span class="swatch-value">#dc2626</span></div>
+            </div>
+            <div class="color-swatch">
+              <div class="swatch-color" style="background:#ca8a04"></div>
+              <div class="swatch-info"><span class="swatch-name">--color-warning</span><span class="swatch-value">#ca8a04</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">ara.so — dark theme</span>
+          <span class="component-source">AraWeb/ara.so/src/index.css (prefers-color-scheme: dark)</span>
+        </div>
+        <div class="component-canvas dark">
+          <div class="token-grid">
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#111110"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-bg</span><span class="swatch-value" style="color:#a8a29e">#111110</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#f5f5f4"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-text</span><span class="swatch-value" style="color:#a8a29e">#f5f5f4</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#1f1e1d"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-surface</span><span class="swatch-value" style="color:#a8a29e">#1f1e1d</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#2f2d2b"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-border</span><span class="swatch-value" style="color:#a8a29e">#2f2d2b</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#4ade80"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-success</span><span class="swatch-value" style="color:#a8a29e">#4ade80</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#2f2d2b">
+              <div class="swatch-color" style="background:#FF3535"></div>
+              <div class="swatch-info" style="background:#1f1e1d"><span class="swatch-name" style="color:#f5f5f4">--color-error</span><span class="swatch-value" style="color:#a8a29e">#FF3535</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">chat.ara.so — dark theme</span>
+          <span class="component-source">chat.ara.so — globals.css</span>
+        </div>
+        <div class="component-canvas dark">
+          <div class="token-grid">
+            <div class="color-swatch" style="border-color:#222">
+              <div class="swatch-color" style="background:#0a0a0a"></div>
+              <div class="swatch-info" style="background:#111"><span class="swatch-name" style="color:#ededed">--bg</span><span class="swatch-value" style="color:#888">#0a0a0a</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#222">
+              <div class="swatch-color" style="background:#ededed"></div>
+              <div class="swatch-info" style="background:#111"><span class="swatch-name" style="color:#ededed">--fg</span><span class="swatch-value" style="color:#888">#ededed</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#222">
+              <div class="swatch-color" style="background:#222"></div>
+              <div class="swatch-info" style="background:#111"><span class="swatch-name" style="color:#ededed">--border</span><span class="swatch-value" style="color:#888">#222</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#222">
+              <div class="swatch-color" style="background:#3b82f6"></div>
+              <div class="swatch-info" style="background:#111"><span class="swatch-name" style="color:#ededed">--accent</span><span class="swatch-value" style="color:#888">#3b82f6</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">HQ admin — dark theme</span>
+          <span class="component-source">hq/public/styles.css</span>
+        </div>
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42">
+          <div class="token-grid">
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#1a1b1d"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--bg</span><span class="swatch-value" style="color:#8c8c90">#1a1b1d</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#232427"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--panel</span><span class="swatch-value" style="color:#8c8c90">#232427</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#3d3e42"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--line</span><span class="swatch-value" style="color:#8c8c90">#3d3e42</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#f5f5f6"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--text</span><span class="swatch-value" style="color:#8c8c90">#f5f5f6</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#b8b8bc"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--muted</span><span class="swatch-value" style="color:#8c8c90">#b8b8bc</span></div>
+            </div>
+            <div class="color-swatch" style="border-color:#3d3e42">
+              <div class="swatch-color" style="background:#8c8c90"></div>
+              <div class="swatch-info" style="background:#232427"><span class="swatch-name" style="color:#f5f5f6">--dim</span><span class="swatch-value" style="color:#8c8c90">#8c8c90</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Shugar — gray scale</span>
+          <span class="component-source">AraWeb/ara.so — Shugar design system</span>
+        </div>
+        <div class="component-canvas">
+          <div class="token-grid">
+            <div class="color-swatch"><div class="swatch-color" style="background:#f5f5f5;border-bottom:1px solid #e5e5e5"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-100</span><span class="swatch-value">#f5f5f5</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#e5e5e5"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-200</span><span class="swatch-value">#e5e5e5</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#d4d4d4"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-300</span><span class="swatch-value">#d4d4d4</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#a3a3a3"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-400</span><span class="swatch-value">#a3a3a3</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#737373"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-500</span><span class="swatch-value">#737373</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#6e6e6e"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-900</span><span class="swatch-value">#6e6e6e</span></div></div>
+            <div class="color-swatch"><div class="swatch-color" style="background:#171717"></div><div class="swatch-info"><span class="swatch-name">--ds-gray-1000</span><span class="swatch-value">#171717</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Typography -->
+      <div class="section-header">
+        <h2 class="section-title">Typography</h2>
+        <p class="section-description">Three typefaces — Inter for UI, Instrument Serif for editorial headings, JetBrains Mono for code.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Font families</span>
+        </div>
+        <div class="component-canvas">
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div>
+              <div style="font-size:11px;color:var(--color-text-tertiary);font-family:var(--font-mono);margin-bottom:6px">--font-sans: 'Inter', ui-sans-serif</div>
+              <div style="font-family:'Inter',sans-serif;font-size:24px;letter-spacing:-0.01em">The quick brown fox jumps over the lazy dog</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--color-text-tertiary);font-family:var(--font-mono);margin-bottom:6px">--font-serif: 'Instrument Serif', Georgia</div>
+              <div style="font-family:'Instrument Serif',Georgia,serif;font-size:26px;letter-spacing:-0.02em">The quick brown fox jumps over the lazy dog</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--color-text-tertiary);font-family:var(--font-mono);margin-bottom:6px">--font-mono: 'JetBrains Mono', 'SF Mono'</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:15px">const agent = new AraAgent({ model: 'claude-opus-4' })</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Type scale</span>
+        </div>
+        <div class="component-canvas">
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">Display</span>
+              <span class="type-spec">48px / serif / 400</span>
+            </div>
+            <div class="type-sample" style="font-family:var(--font-serif);font-size:48px;font-weight:400;letter-spacing:-0.03em;line-height:1.05">Your AI on Mac</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">H1</span>
+              <span class="type-spec">32px / sans / 600</span>
+            </div>
+            <div class="type-sample" style="font-size:32px;font-weight:600;letter-spacing:-0.02em">Your AI on Mac</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">H2</span>
+              <span class="type-spec">22px / sans / 600</span>
+            </div>
+            <div class="type-sample" style="font-size:22px;font-weight:600;letter-spacing:-0.02em">Design tokens</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">H3</span>
+              <span class="type-spec">16px / sans / 600</span>
+            </div>
+            <div class="type-sample" style="font-size:16px;font-weight:600;letter-spacing:-0.01em">Color swatches</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">Body</span>
+              <span class="type-spec">14px / sans / 400</span>
+            </div>
+            <div class="type-sample" style="font-size:14px;line-height:1.6;color:var(--color-text-secondary)">Ara is a macOS AI agent that lives in your notch and drives any app. It uses Claude to automate your workflows without switching context.</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">Caption</span>
+              <span class="type-spec">12px / sans / 400</span>
+            </div>
+            <div class="type-sample" style="font-size:12px;color:var(--color-text-tertiary)">Last updated 3 minutes ago · ara.so v1.4.2</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">Label</span>
+              <span class="type-spec">10px / sans / 600 uppercase</span>
+            </div>
+            <div class="type-sample" style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-tertiary)">Section label</div>
+          </div>
+          <div class="type-scale-item">
+            <div class="type-meta">
+              <span class="type-label">Code</span>
+              <span class="type-spec">13px / mono / 400</span>
+            </div>
+            <div class="type-sample" style="font-family:var(--font-mono);font-size:13px;background:var(--color-bg-alt);padding:8px 12px;border-radius:6px;color:var(--color-text)">git push -u origin HEAD</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Spacing -->
+      <div class="section-header">
+        <h2 class="section-title">Spacing scale</h2>
+        <p class="section-description">4px base unit. All spacing tokens are multiples of 4.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas">
+          <div class="spacing-grid">
+            <div class="spacing-item"><span class="spacing-name">--space-1</span><div class="spacing-bar" style="width:4px"></div><span class="spacing-value">4px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-2</span><div class="spacing-bar" style="width:8px"></div><span class="spacing-value">8px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-3</span><div class="spacing-bar" style="width:12px"></div><span class="spacing-value">12px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-4</span><div class="spacing-bar" style="width:16px"></div><span class="spacing-value">16px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-5</span><div class="spacing-bar" style="width:20px"></div><span class="spacing-value">20px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-6</span><div class="spacing-bar" style="width:24px"></div><span class="spacing-value">24px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-8</span><div class="spacing-bar" style="width:32px"></div><span class="spacing-value">32px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-10</span><div class="spacing-bar" style="width:40px"></div><span class="spacing-value">40px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-12</span><div class="spacing-bar" style="width:48px"></div><span class="spacing-value">48px</span></div>
+            <div class="spacing-item"><span class="spacing-name">--space-16</span><div class="spacing-bar" style="width:64px"></div><span class="spacing-value">64px</span></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Border radius -->
+      <div class="section-header">
+        <h2 class="section-title">Border radius</h2>
+        <p class="section-description">Radius tokens used across all Ara surfaces.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas">
+          <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end">
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:4px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">sm (4px)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:8px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">md (8px)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:12px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">lg (12px)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:16px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">xl (16px)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:24px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">2xl (24px)</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:9999px;opacity:0.15;margin-bottom:6px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">full (∞)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shadows -->
+      <div class="section-header">
+        <h2 class="section-title">Shadows</h2>
+        <p class="section-description">Shugar shadow tokens used in ara.so menus and modals.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas">
+          <div style="display:flex;gap:24px;flex-wrap:wrap">
+            <div>
+              <div style="width:100px;height:60px;background:var(--color-surface);border-radius:8px;box-shadow:0 0 0 1px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);margin-bottom:8px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">--ds-shadow-border</div>
+            </div>
+            <div>
+              <div style="width:100px;height:60px;background:var(--color-surface);border-radius:8px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);margin-bottom:8px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">--ds-shadow-menu</div>
+            </div>
+            <div>
+              <div style="width:100px;height:60px;background:var(--color-surface);border-radius:8px;box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);margin-bottom:8px"></div>
+              <div style="font-size:10px;color:var(--color-text-tertiary);font-family:var(--font-mono)">--ds-shadow-modal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.showcase-content -->
+  </div><!-- /.showcase-main -->
+</div><!-- /.showcase-layout -->
+</body>
+</html>

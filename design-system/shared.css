@@ -1,0 +1,321 @@
+/* =============================================================================
+   ARA DESIGN SYSTEM — shared.css
+   Canonical design tokens for all Ara surfaces.
+   Import this file first in every showcase page.
+   ============================================================================= */
+
+/* -------------------------------------------------------------------------- */
+/* 1. FONTS                                                                   */
+/* -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/* 2. DESIGN TOKENS — LIGHT (ara.so)                                          */
+/* -------------------------------------------------------------------------- */
+:root {
+  /* Core palette */
+  --ara-bg:              #fff;
+  --ara-bg-alt:          #f5f5f4;
+  --ara-bg-nav:          rgba(255,255,255,0.72);
+  --ara-text:            #000;
+  --ara-text-muted:      rgba(0,0,0,0.9);
+  --ara-text-dim:        rgba(0,0,0,0.8);
+  --ara-text-body:       rgba(0,0,0,0.7);
+  --ara-text-faint:      rgba(0,0,0,0.5);
+  --ara-text-extra-faint:rgba(0,0,0,0.4);
+  --ara-border:          rgba(0,0,0,0.08);
+  --ara-border-hover:    rgba(0,0,0,0.14);
+  --ara-surface:         rgba(0,0,0,0.05);
+  --ara-surface-hover:   rgba(0,0,0,0.03);
+  --ara-surface-card:    rgba(0,0,0,0.02);
+  --ara-cta-bg:          #000;
+  --ara-cta-text:        #fff;
+  --ara-logo-invert:     0;
+
+  /* Semantic */
+  --ara-success:         #16a34a;
+  --ara-warning:         #ca8a04;
+  --ara-error:           #dc2626;
+  --ara-accent:          #3b82f6;
+
+  /* Shugar / ds tokens */
+  --ds-gray-100:         #f5f5f5;
+  --ds-gray-900:         #6e6e6e;
+  --ds-gray-1000:        #171717;
+  --ds-gray-alpha-100:   rgba(0,0,0,0.05);
+  --ds-gray-alpha-400:   rgba(0,0,0,0.14);
+  --ds-bg-100:           #ffffff;
+  --ds-bg-200:           #fafafa;
+
+  /* Shadows */
+  --ara-shadow-border:   0 0 0 1px rgba(0,0,0,0.06);
+  --ara-shadow-sm:       0 0 0 1px rgba(0,0,0,0.04);
+  --ara-shadow-md:       0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --ara-shadow-lg:       0 0 0 1px rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.08);
+  --ara-shadow-menu:     0 0 0 1px rgba(0,0,0,0.06), 0 4px 8px rgba(0,0,0,0.06), 0 16px 32px rgba(0,0,0,0.06);
+  --ara-shadow-modal:    0 0 0 1px rgba(0,0,0,0.06), 0 16px 48px rgba(0,0,0,0.12);
+  --ara-shadow-heavy:    0 25px 50px -12px rgba(0,0,0,0.15);
+
+  /* Typography */
+  --font-sans:   'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif:  'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono:   'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Spacing scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Border radii */
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Notch-specific */
+  --notch-open-w:   640px;
+  --notch-open-h:   190px;
+  --notch-closed-w: 185px;
+  --notch-closed-h: 32px;
+  --notch-corner-open-bottom:   24px;
+  --notch-corner-closed-bottom: 14px;
+
+  /* AraDesktop colors */
+  --notch-bg:          rgba(0,0,0,0.85);
+  --notch-bg-solid:    #111110;
+  --notch-text:        #ffffff;
+  --notch-text-dim:    rgba(255,255,255,0.6);
+  --notch-text-faint:  rgba(255,255,255,0.4);
+  --notch-border:      rgba(255,255,255,0.08);
+
+  /* Chat surface (chat.ara.so) */
+  --chat-bg:           #0a0a0a;
+  --chat-fg:           #ededed;
+  --chat-border:       #222222;
+  --chat-bubble-user-bg:    #ffffff;
+  --chat-bubble-user-fg:    #000000;
+  --chat-bubble-agent-bg:   rgba(38,38,38,0.8);
+  --chat-bubble-agent-fg:   #ffffff;
+  --chat-bubble-agent-border: rgba(255,255,255,0.04);
+
+  /* Transitions */
+  --transition-fast:  150ms ease;
+  --transition-mid:   200ms ease;
+  --transition-slow:  300ms ease;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. DESIGN TOKENS — DARK OVERRIDE                                           */
+/* -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ara-bg:              #111110;
+    --ara-bg-alt:          #1a1a18;
+    --ara-bg-nav:          rgba(17,17,16,0.72);
+    --ara-text:            #f5f5f4;
+    --ara-text-muted:      rgba(245,245,244,0.9);
+    --ara-text-dim:        rgba(245,245,244,0.8);
+    --ara-text-body:       rgba(245,245,244,0.7);
+    --ara-text-faint:      rgba(245,245,244,0.5);
+    --ara-text-extra-faint:rgba(245,245,244,0.4);
+    --ara-border:          rgba(255,255,255,0.08);
+    --ara-border-hover:    rgba(255,255,255,0.14);
+    --ara-surface:         rgba(255,255,255,0.05);
+    --ara-surface-hover:   rgba(255,255,255,0.07);
+    --ara-surface-card:    rgba(255,255,255,0.03);
+    --ara-cta-bg:          #ffffff;
+    --ara-cta-text:        #000000;
+  }
+}
+
+/* Force dark for .dark-surface and .notch-demo contexts */
+.dark-surface {
+  --ara-bg:              #111110;
+  --ara-text:            #f5f5f4;
+  --ara-text-body:       rgba(245,245,244,0.7);
+  --ara-text-faint:      rgba(245,245,244,0.5);
+  --ara-border:          rgba(255,255,255,0.08);
+  --ara-surface:         rgba(255,255,255,0.05);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. BASE RESET                                                              */
+/* -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--ara-bg);
+  color: var(--ara-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; }
+button { font-family: inherit; cursor: pointer; }
+code, pre { font-family: var(--font-mono); }
+
+/* -------------------------------------------------------------------------- */
+/* 5. SHOWCASE SHELL                                                          */
+/* -------------------------------------------------------------------------- */
+.ds-layout {
+  display: flex;
+  min-height: 100dvh;
+}
+
+.ds-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--ara-border);
+  padding: var(--space-6) var(--space-4);
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow-y: auto;
+  background: var(--ara-bg-alt, #fafaf9);
+}
+
+.ds-sidebar-logo {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ara-text);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ds-sidebar-logo span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ara-text-faint);
+  letter-spacing: 0;
+  margin-left: auto;
+}
+
+.ds-sidebar-section {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ara-text-faint);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-2);
+}
+
+.ds-sidebar nav a {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ara-text-body);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  margin-bottom: 2px;
+}
+.ds-sidebar nav a:hover,
+.ds-sidebar nav a.active {
+  background: var(--ara-surface);
+  color: var(--ara-text);
+}
+
+.ds-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-12) var(--space-10);
+  max-width: 960px;
+}
+
+.ds-page-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--ara-text);
+  margin-bottom: var(--space-2);
+}
+
+.ds-page-subtitle {
+  font-size: 15px;
+  color: var(--ara-text-body);
+  margin-bottom: var(--space-10);
+}
+
+.ds-section {
+  margin-bottom: var(--space-12);
+}
+
+.ds-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ara-text-faint);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--ara-border);
+  padding-bottom: var(--space-3);
+}
+
+.ds-canvas {
+  background: var(--ara-bg-alt, #fafaf9);
+  border: 1px solid var(--ara-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+}
+
+.ds-canvas.dark {
+  background: #0a0a0a;
+  border-color: #222;
+}
+
+.ds-canvas.notch-bg {
+  background: #000;
+  border-color: #222;
+  justify-content: center;
+  padding: var(--space-10) var(--space-8);
+}
+
+.ds-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ara-text-faint);
+  font-family: var(--font-mono);
+  margin-bottom: var(--space-4);
+}
+
+.ds-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.ds-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-6); }
+@media (max-width: 700px) {
+  .ds-sidebar { display: none; }
+  .ds-main { padding: var(--space-6) var(--space-4); }
+  .ds-grid-2, .ds-grid-3 { grid-template-columns: 1fr; }
+}

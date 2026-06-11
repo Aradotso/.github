@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notch — Ara Design System</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="components.css" />
+</head>
+<body>
+<div class="showcase-layout">
+  <!-- Sidebar -->
+  <nav class="showcase-sidebar">
+    <a class="sidebar-logo" href="index.html">
+      <span class="sidebar-logo-mark">A</span>
+      <span class="sidebar-logo-text">Design System</span>
+    </a>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Foundation</div>
+      <ul class="sidebar-nav">
+        <li><a href="tokens.html"><span class="nav-icon">🎨</span> Tokens</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Components</div>
+      <ul class="sidebar-nav">
+        <li><a href="notch.html" class="active"><span class="nav-icon">⌨️</span> Notch</a></li>
+        <li><a href="chat.html"><span class="nav-icon">💬</span> Chat</a></li>
+        <li><a href="landing.html"><span class="nav-icon">🌐</span> Landing</a></li>
+        <li><a href="hq.html"><span class="nav-icon">🗄️</span> HQ Admin</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Overview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <div class="showcase-main">
+    <div class="showcase-topbar">
+      <span class="topbar-title">Notch</span>
+      <span class="topbar-badge">AraDesktop</span>
+    </div>
+
+    <div class="showcase-content">
+      <div class="section-header">
+        <h1 class="section-title">AraDesktop notch components</h1>
+        <p class="section-description">The notch silhouette lives in macOS's hardware notch area. All dimensions sourced from <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraNotchSizing.swift</code>. Open state: 640×190pt; closed: ~185×32pt.</p>
+      </div>
+
+      <!-- Notch states -->
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Closed state</span>
+          <span class="component-source">AraDesktop/Desktop/Sources/Notch/AraNotchSizing.swift</span>
+        </div>
+        <div class="component-canvas notch-canvas">
+          <div style="text-align:center">
+            <div class="notch-closed">
+              <div class="notch-brand-tile"></div>
+            </div>
+            <div class="variant-label">Closed · 185×32pt · radius top:6 bottom:14</div>
+          </div>
+          <div style="text-align:center">
+            <div class="notch-closed" style="width:245px;height:54px;border-radius:6px 6px 18px 18px;align-items:flex-end;padding-bottom:6px;padding-left:22px">
+              <div class="notch-peek-cursor"></div>
+              <span class="notch-peek-text">writing email draft…</span>
+            </div>
+            <div class="variant-label">Closed + peek strip (agent running)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Open state</span>
+          <span class="component-source">AraDesktop/Desktop/Sources/Notch/AraNotchContentView.swift</span>
+        </div>
+        <div class="component-canvas notch-canvas">
+          <div style="text-align:center">
+            <div class="notch-open">
+              <!-- Header row -->
+              <div class="notch-open-header">
+                <span class="notch-title">Ara</span>
+                <!-- Gear icon -->
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
+                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+                <span class="notch-tab-pill">Archive</span>
+                <div style="flex:1"></div>
+                <!-- New thread -->
+                <span class="notch-tab-pill" style="gap:3px">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span class="notch-tab-pill active">Home</span>
+              </div>
+              <!-- Thread list -->
+              <div style="flex:1;padding:8px 16px;display:flex;flex-direction:column;gap:6px;overflow:hidden">
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.05)">
+                  <div style="width:8px;height:8px;border-radius:9999px;background:#a78bfa;flex-shrink:0;animation:pulse-rec 1.5s ease-in-out infinite"></div>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Writing the weekly engineering update</span>
+                  <span style="font-size:10px;color:rgba(255,255,255,0.3)">2m</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:8px">
+                  <div style="width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,0.2);flex-shrink:0"></div>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.5);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Research competitor pricing pages</span>
+                  <span style="font-size:10px;color:rgba(255,255,255,0.2)">1h</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:8px">
+                  <div style="width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,0.2);flex-shrink:0"></div>
+                  <span style="font-size:11px;color:rgba(255,255,255,0.5);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Draft Stripe webhook handler</span>
+                  <span style="font-size:10px;color:rgba(255,255,255,0.2)">3h</span>
+                </div>
+              </div>
+            </div>
+            <div class="variant-label">Open · 480×190pt · radius top:19 bottom:24</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Voice pill state</span>
+          <span class="component-source">AraDesktop/Desktop/Sources/Notch/AraNotchVoicePillView.swift</span>
+        </div>
+        <div class="component-canvas notch-canvas">
+          <div style="text-align:center">
+            <div class="voice-pill">
+              <div class="voice-bars">
+                <div class="voice-bar"></div>
+                <div class="voice-bar"></div>
+                <div class="voice-bar"></div>
+                <div class="voice-bar"></div>
+                <div class="voice-bar"></div>
+              </div>
+              <span style="font-size:11px;color:rgba(255,255,255,0.7);flex:1">Listening…</span>
+              <span style="font-size:10px;color:rgba(255,255,255,0.35)">release to send</span>
+            </div>
+            <div class="variant-label">Voice pill · 320×32pt · recording active</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Steer button -->
+      <div class="section-header">
+        <h2 class="section-title">Steer button</h2>
+        <p class="section-description">Rendered inside the askQuestion squareview. Tapping steer starts PTT with the option prefix; tapping the label submits directly. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraNotchContentView.swift → handleAskSteer</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Ask question view — steer buttons</span>
+          <span class="component-source">AraDesktop/Desktop/Sources/Notch/AraNotchAskQuestionView.swift</span>
+        </div>
+        <div class="component-canvas notch-canvas">
+          <div style="text-align:center">
+            <!-- askQuestion squareview -->
+            <div style="background:#000;border-radius:6px 6px 28px 28px;width:260px;height:180px;display:flex;flex-direction:column;padding:38px 16px 16px;gap:8px">
+              <div style="font-size:11px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:2px">What would you like to do next?</div>
+              <!-- Option rows -->
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;border:1px solid rgba(255,255,255,0.07)">
+                <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Make it more concise</span>
+                <!-- Steer icon -->
+                <button class="steer-button" style="padding:3px 7px;font-size:10px">
+                  <svg class="steer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4l3 3"/>
+                  </svg>
+                  Steer
+                </button>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;border:1px solid rgba(255,255,255,0.07)">
+                <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Add more examples</span>
+                <button class="steer-button" style="padding:3px 7px;font-size:10px">
+                  <svg class="steer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4l3 3"/>
+                  </svg>
+                  Steer
+                </button>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.06);border-radius:8px;padding:7px 10px;border:1px solid rgba(255,255,255,0.07)">
+                <span style="font-size:11px;color:rgba(255,255,255,0.8);flex:1">Start over with a different angle</span>
+                <button class="steer-button" style="padding:3px 7px;font-size:10px">
+                  <svg class="steer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8v4l3 3"/>
+                  </svg>
+                  Steer
+                </button>
+              </div>
+            </div>
+            <div class="variant-label">askQuestion squareview · 260×180pt</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Recording indicator -->
+      <div class="section-header">
+        <h2 class="section-title">Session recording indicator</h2>
+        <p class="section-description">Shown inside the open notch when session recording is active. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraDesktop/Desktop/Sources/SessionRecordingManager.swift</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Recording indicator</span>
+        </div>
+        <div class="component-canvas dark">
+          <div class="variant-row">
+            <div style="text-align:center">
+              <div class="recording-indicator">
+                <span class="rec-dot"></span>
+                Recording session
+              </div>
+              <div class="variant-label" style="color:#a8a29e">Active</div>
+            </div>
+            <div style="text-align:center">
+              <div class="recording-indicator" style="background:rgba(156,163,175,0.1);border-color:rgba(156,163,175,0.2);color:#9ca3af">
+                <span class="rec-dot" style="background:#9ca3af;animation:none"></span>
+                Recording paused
+              </div>
+              <div class="variant-label" style="color:#a8a29e">Paused</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Error toast -->
+      <div class="section-header">
+        <h2 class="section-title">Error toast</h2>
+        <p class="section-description">Transient error notification shown when an agent run fails or an API call errors out.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Error toast variants</span>
+          <span class="component-source">AraDesktop — AraNotchContentView</span>
+        </div>
+        <div class="component-canvas dark">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <div class="error-toast">
+                <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Claude API rate limit reached — retrying in 30s
+              </div>
+              <div class="variant-label" style="color:#a8a29e;text-align:left;margin-top:4px">Error (API)</div>
+            </div>
+            <div>
+              <div class="error-toast" style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);color:#fde68a">
+                <svg class="toast-icon" style="color:#fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                </svg>
+                Screen recording permission needed
+              </div>
+              <div class="variant-label" style="color:#a8a29e;text-align:left;margin-top:4px">Warning (permission)</div>
+            </div>
+            <div>
+              <div class="error-toast" style="background:rgba(74,222,128,0.08);border-color:rgba(74,222,128,0.2);color:#bbf7d0">
+                <svg class="toast-icon" style="color:#4ade80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                Session saved to archive
+              </div>
+              <div class="variant-label" style="color:#a8a29e;text-align:left;margin-top:4px">Success</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Text input view -->
+      <div class="section-header">
+        <h2 class="section-title">Text input view</h2>
+        <p class="section-description">Activated when the user presses the text-mode hotkey. A compact single-row TextField that expands the closed silhouette downward. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraNotchTextInputView.swift</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas notch-canvas">
+          <div style="text-align:center">
+            <div style="background:#000;border-radius:6px 6px 22px 22px;width:260px;height:80px;display:flex;align-items:center;padding:38px 16px 14px">
+              <div style="flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:6px 10px">
+                <span style="font-size:12px;color:rgba(255,255,255,0.4)">Message Ara…</span>
+              </div>
+            </div>
+            <div class="variant-label">textInput view · 260×80pt · radius top:6 bottom:22</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Notch sizing reference -->
+      <div class="section-header">
+        <h2 class="section-title">Sizing reference</h2>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas">
+          <table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.04em">State</th>
+                <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.04em">Width</th>
+                <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.04em">Height</th>
+                <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.04em">Radius (top / bottom)</th>
+                <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:0.04em">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <td style="padding:9px 12px;font-weight:500">Open</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">640pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">190pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">19 / 24</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">openSize</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <td style="padding:9px 12px;font-weight:500">Closed</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">~185pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">~32pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">6 / 14</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">closedSize()</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <td style="padding:9px 12px;font-weight:500">Voice pill</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">320pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">= closed</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">6 / 18</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">voicePillSize()</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <td style="padding:9px 12px;font-weight:500">Hello (squareview)</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">closed+chin</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">140pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">6 / 22</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">squareSize(.hello)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--color-border)">
+                <td style="padding:9px 12px;font-weight:500">Ask question</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">closed+chin</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">180pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">6 / 28</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">squareSize(.ask)</td>
+              </tr>
+              <tr>
+                <td style="padding:9px 12px;font-weight:500">Text input</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">closed+chin</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">80pt</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-secondary)">6 / 22</td>
+                <td style="padding:9px 12px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary)">textInputSize()</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing — Ara Design System</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="components.css" />
+</head>
+<body>
+<div class="showcase-layout">
+  <nav class="showcase-sidebar">
+    <a class="sidebar-logo" href="index.html">
+      <span class="sidebar-logo-mark">A</span>
+      <span class="sidebar-logo-text">Design System</span>
+    </a>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Foundation</div>
+      <ul class="sidebar-nav">
+        <li><a href="tokens.html"><span class="nav-icon">🎨</span> Tokens</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Components</div>
+      <ul class="sidebar-nav">
+        <li><a href="notch.html"><span class="nav-icon">⌨️</span> Notch</a></li>
+        <li><a href="chat.html"><span class="nav-icon">💬</span> Chat</a></li>
+        <li><a href="landing.html" class="active"><span class="nav-icon">🌐</span> Landing</a></li>
+        <li><a href="hq.html"><span class="nav-icon">🗄️</span> HQ Admin</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Overview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="showcase-main">
+    <div class="showcase-topbar">
+      <span class="topbar-title">Landing</span>
+      <span class="topbar-badge">ara.so</span>
+    </div>
+
+    <div class="showcase-content">
+      <div class="section-header">
+        <h1 class="section-title">ara.so landing components</h1>
+        <p class="section-description">Hero section, CTA buttons, feature cards, and section layouts from <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraWeb/ara.so</code>. Light and dark themes.</p>
+      </div>
+
+      <!-- Hero section -->
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Hero section — light</span>
+          <span class="component-source">AraWeb/ara.so/src — --color-bg: #fcfbf8</span>
+        </div>
+        <div class="component-canvas" style="padding:0;overflow:hidden">
+          <div class="landing-hero">
+            <p class="landing-eyebrow">Ara for Mac</p>
+            <h1 class="landing-headline">Your AI that<br/>lives in the notch</h1>
+            <p class="landing-subhead">An AI agent that sits in your Mac's notch, listens, and acts — without interrupting your flow.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+              <button class="cta-button">
+                Download free
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l5 5 5-5M12 21V3"/>
+                </svg>
+              </button>
+              <button class="cta-button-secondary">Watch demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Hero section — dark</span>
+          <span class="component-source">AraWeb/ara.so/src — --ara-bg: #111110</span>
+        </div>
+        <div class="component-canvas dark" style="padding:0;overflow:hidden">
+          <div class="landing-hero" style="background:#111110;border:none">
+            <p class="landing-eyebrow" style="color:#a8a29e">Ara for Mac</p>
+            <h1 class="landing-headline" style="color:#f5f5f4">Your AI that<br/>lives in the notch</h1>
+            <p class="landing-subhead" style="color:#78716c">An AI agent that sits in your Mac's notch, listens, and acts — without interrupting your flow.</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+              <button class="cta-button" style="background:#fff;color:#000">
+                Download free
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l5 5 5-5M12 21V3"/>
+                </svg>
+              </button>
+              <button class="cta-button-secondary" style="border-color:#2f2d2b;color:#f5f5f4">Watch demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- CTA buttons -->
+      <div class="section-header">
+        <h2 class="section-title">CTA buttons</h2>
+        <p class="section-description">Full-pill CTA buttons used on ara.so. Primary uses the brand CTA token; secondary is ghost with border.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Button variants</span>
+        </div>
+        <div class="component-canvas">
+          <div class="variant-row" style="align-items:center">
+            <div style="text-align:center">
+              <button class="cta-button">Download free</button>
+              <div class="variant-label">Primary (light)</div>
+            </div>
+            <div style="text-align:center">
+              <button class="cta-button-secondary">Watch demo</button>
+              <div class="variant-label">Secondary</div>
+            </div>
+            <div style="text-align:center">
+              <button class="cta-button" style="padding:8px 18px;font-size:13px">Get started</button>
+              <div class="variant-label">Small</div>
+            </div>
+            <div style="text-align:center">
+              <button class="cta-button" style="opacity:0.4;cursor:not-allowed">Disabled</button>
+              <div class="variant-label">Disabled</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Button variants — dark surface</span>
+        </div>
+        <div class="component-canvas dark">
+          <div class="variant-row" style="align-items:center">
+            <div style="text-align:center">
+              <button class="cta-button" style="background:#fff;color:#000">Download free</button>
+              <div class="variant-label" style="color:#a8a29e">Primary (dark)</div>
+            </div>
+            <div style="text-align:center">
+              <button class="cta-button-secondary" style="border-color:#2f2d2b;color:#f5f5f4">Watch demo</button>
+              <div class="variant-label" style="color:#a8a29e">Secondary (dark)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Feature grid -->
+      <div class="section-header">
+        <h2 class="section-title">Feature grid</h2>
+        <p class="section-description">3-column responsive feature card grid used in ara.so sections.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Feature cards — light</span>
+        </div>
+        <div class="component-canvas">
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎙️</div>
+              <h3 class="feature-title">Voice first</h3>
+              <p class="feature-desc">Hold right-Option to talk. Ara transcribes and acts on your words instantly.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🖥️</div>
+              <h3 class="feature-title">Lives in the notch</h3>
+              <p class="feature-desc">Zero dock space. Ara opens with a hover and stays out of the way otherwise.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🤖</div>
+              <h3 class="feature-title">Claude-powered</h3>
+              <p class="feature-desc">Uses Anthropic's Claude for reasoning, writing, and driving any Mac app.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔐</div>
+              <h3 class="feature-title">BYOK</h3>
+              <p class="feature-desc">Bring your own API key. Data stays between you and Anthropic.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3 class="feature-title">Phone companion</h3>
+              <p class="feature-desc">chat.ara.so lets you send tasks from your phone to your desktop.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⏰</div>
+              <h3 class="feature-title">Cron jobs</h3>
+              <p class="feature-desc">Schedule recurring tasks. Ara runs them automatically in the background.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Section layout -->
+      <div class="section-header">
+        <h2 class="section-title">Section layout</h2>
+        <p class="section-description">Full-width section block pattern used between major page sections.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Section — light</span>
+        </div>
+        <div class="component-canvas" style="padding:0;overflow:hidden">
+          <div class="landing-section">
+            <h2 class="landing-section-title">Voice-first AI for power users</h2>
+            <p class="landing-section-body">Hold right-Option on any Mac with a notch and Ara listens. Speak a task — "draft a reply to that email", "search the docs for the API endpoint" — and Ara acts on your active application without requiring you to switch context or type a single command.</p>
+          </div>
+          <div class="landing-section" style="background:var(--color-bg-alt)">
+            <h2 class="landing-section-title">Built for Claude</h2>
+            <p class="landing-section-body">Ara uses Anthropic's Claude as its reasoning engine. It sees your screen, reads files, writes code, and drives apps — all through structured tool calls that you can inspect in the notch's live activity strip.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Nav / topbar -->
+      <div class="section-header">
+        <h2 class="section-title">Site navigation</h2>
+        <p class="section-description">Minimal topbar used on ara.so — logo left, links right.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Topbar — light</span>
+        </div>
+        <div class="component-canvas" style="padding:0;overflow:hidden">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--color-border);background:var(--color-surface)">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:20px;height:20px;background:#000;border-radius:5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700">A</div>
+              <span style="font-size:14px;font-weight:600;letter-spacing:-0.01em">Ara</span>
+            </div>
+            <nav style="display:flex;align-items:center;gap:24px">
+              <a href="#" style="text-decoration:none;font-size:13px;color:var(--color-text-secondary)">Docs</a>
+              <a href="#" style="text-decoration:none;font-size:13px;color:var(--color-text-secondary)">Pricing</a>
+              <a href="#" style="text-decoration:none;font-size:13px;color:var(--color-text-secondary)">Blog</a>
+              <button class="cta-button" style="padding:7px 16px;font-size:13px">Download</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Topbar — dark</span>
+        </div>
+        <div class="component-canvas dark" style="padding:0;overflow:hidden">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid #2f2d2b;background:#111110">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:20px;height:20px;background:#fff;border-radius:5px;display:flex;align-items:center;justify-content:center;color:#000;font-size:11px;font-weight:700">A</div>
+              <span style="font-size:14px;font-weight:600;letter-spacing:-0.01em;color:#f5f5f4">Ara</span>
+            </div>
+            <nav style="display:flex;align-items:center;gap:24px">
+              <a href="#" style="text-decoration:none;font-size:13px;color:#78716c">Docs</a>
+              <a href="#" style="text-decoration:none;font-size:13px;color:#78716c">Pricing</a>
+              <a href="#" style="text-decoration:none;font-size:13px;color:#78716c">Blog</a>
+              <button class="cta-button" style="background:#fff;color:#000;padding:7px 16px;font-size:13px">Download</button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Inline waitlist -->
+      <div class="section-header">
+        <h2 class="section-title">Inline waitlist / email capture</h2>
+        <p class="section-description">Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">AraWeb/ara.so/src/components/inline-waitlist.tsx</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas">
+          <div style="display:flex;gap:8px;max-width:400px">
+            <input type="email" placeholder="you@example.com" style="flex:1;border:1px solid var(--color-border);border-radius:9999px;padding:10px 16px;font-size:14px;font-family:var(--font-sans);background:var(--color-surface);color:var(--color-text);outline:none" />
+            <button class="cta-button" style="flex-shrink:0">Join waitlist</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat — Ara Design System</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="components.css" />
+  <style>
+    .tool-list { display: none; }
+    .tool-list.open { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+<div class="showcase-layout">
+  <nav class="showcase-sidebar">
+    <a class="sidebar-logo" href="index.html">
+      <span class="sidebar-logo-mark">A</span>
+      <span class="sidebar-logo-text">Design System</span>
+    </a>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Foundation</div>
+      <ul class="sidebar-nav">
+        <li><a href="tokens.html"><span class="nav-icon">🎨</span> Tokens</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Components</div>
+      <ul class="sidebar-nav">
+        <li><a href="notch.html"><span class="nav-icon">⌨️</span> Notch</a></li>
+        <li><a href="chat.html" class="active"><span class="nav-icon">💬</span> Chat</a></li>
+        <li><a href="landing.html"><span class="nav-icon">🌐</span> Landing</a></li>
+        <li><a href="hq.html"><span class="nav-icon">🗄️</span> HQ Admin</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Overview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="showcase-main">
+    <div class="showcase-topbar">
+      <span class="topbar-title">Chat</span>
+      <span class="topbar-badge">chat.ara.so</span>
+    </div>
+
+    <div class="showcase-content">
+      <div class="section-header">
+        <h1 class="section-title">AraWeb chat components</h1>
+        <p class="section-description">Chat bubble system from <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">chat.ara.so/components/Chat.tsx</code>. Dark surface: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">--bg: #0a0a0a</code>.</p>
+      </div>
+
+      <!-- Message bubbles -->
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Message bubbles</span>
+          <span class="component-source">chat.ara.so/components/Chat.tsx → MessageBubble</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div class="chat-thread">
+            <!-- User bubble -->
+            <div class="chat-bubble-row user">
+              <div class="chat-bubble bubble-user">
+                Summarize the meeting notes from this morning
+              </div>
+            </div>
+            <!-- Agent bubble -->
+            <div class="chat-bubble-row agent">
+              <div class="chat-bubble bubble-agent">
+                Here's a summary of this morning's meeting notes:
+                <br/><br/>
+                The team discussed Q3 launch timeline, agreed on a two-week buffer for QA, and assigned Alex to lead the design review.
+              </div>
+            </div>
+            <!-- User -->
+            <div class="chat-bubble-row user">
+              <div class="chat-bubble bubble-user">
+                Can you also write a follow-up email draft?
+              </div>
+            </div>
+            <!-- Agent with tool activity -->
+            <div class="chat-bubble-row agent">
+              <div class="chat-bubble bubble-agent">
+                <!-- Tool activity - collapsible -->
+                <div class="tool-activity">
+                  <button class="tool-activity-header" onclick="toggleTools(this)">
+                    <svg class="tool-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                    </svg>
+                    <svg class="tool-status-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>2 actions</span>
+                  </button>
+                  <div class="tool-list">
+                    <div class="tool-item">
+                      <span class="tool-dot done"></span>
+                      <span>read_file meeting-notes.md</span>
+                    </div>
+                    <div class="tool-item">
+                      <span class="tool-dot done"></span>
+                      <span>write_file follow-up-email.md</span>
+                    </div>
+                  </div>
+                </div>
+                I've drafted the follow-up email and saved it to <code style="font-family:var(--font-mono);font-size:11px;background:rgba(255,255,255,0.06);padding:1px 4px;border-radius:3px">follow-up-email.md</code>.
+              </div>
+            </div>
+            <!-- Streaming / typing -->
+            <div class="chat-bubble-row agent">
+              <div class="chat-bubble bubble-agent">
+                <span class="typing-indicator">
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Bubble variants closeup -->
+      <div class="section-header">
+        <h2 class="section-title">Bubble anatomy</h2>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">User bubble</span>
+          <span class="component-source">bg-white text-black rounded-2xl rounded-br-md</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div class="variant-row" style="justify-content:flex-end">
+            <div>
+              <div class="chat-bubble bubble-user">Short message</div>
+              <div class="variant-label" style="color:#888">Short</div>
+            </div>
+            <div>
+              <div class="chat-bubble bubble-user" style="max-width:260px">A longer message that wraps to show how the bubble handles multi-line content with the rounded corner treatment.</div>
+              <div class="variant-label" style="color:#888">Long</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Agent bubble</span>
+          <span class="component-source">bg-neutral-800/80 text-white rounded-2xl rounded-bl-md border border-white/[0.04]</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div class="variant-row">
+            <div>
+              <div class="chat-bubble bubble-agent">Short reply</div>
+              <div class="variant-label" style="color:#888">Short</div>
+            </div>
+            <div>
+              <div class="chat-bubble bubble-agent" style="max-width:260px">A longer agent reply that wraps to show how the dark bubble handles multi-line content with the bottom-left flat corner treatment.</div>
+              <div class="variant-label" style="color:#888">Long</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Tool activity -->
+      <div class="section-header">
+        <h2 class="section-title">Tool activity rows</h2>
+        <p class="section-description">Collapsible chevron row with green dot (done) or yellow dot (running). Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">Chat.tsx → ToolActivities</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Tool activity — running</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div class="chat-bubble bubble-agent" style="max-width:320px">
+            <div class="tool-activity">
+              <button class="tool-activity-header" onclick="toggleTools(this)">
+                <svg class="tool-chevron expanded" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+                <!-- Spinner -->
+                <svg class="tool-status-icon" style="animation:spin 1s linear infinite" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="rgba(163,163,163,0.4)" stroke-width="3"/>
+                  <circle cx="12" cy="12" r="10" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round" stroke-dasharray="15 47"/>
+                </svg>
+                <span>3 actions</span>
+              </button>
+              <div class="tool-list open">
+                <div class="tool-item">
+                  <span class="tool-dot done"></span>
+                  <span>computer_use — screenshot</span>
+                </div>
+                <div class="tool-item">
+                  <span class="tool-dot done"></span>
+                  <span>bash — ls ~/Desktop</span>
+                </div>
+                <div class="tool-item">
+                  <span class="tool-dot running"></span>
+                  <span>write_file report.md</span>
+                </div>
+              </div>
+            </div>
+            <span class="typing-indicator">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Tool activity — all done (collapsed)</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div class="chat-bubble bubble-agent" style="max-width:320px">
+            <div class="tool-activity">
+              <button class="tool-activity-header" onclick="toggleTools(this)">
+                <svg class="tool-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+                <svg class="tool-status-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span>3 actions</span>
+              </button>
+              <div class="tool-list">
+                <div class="tool-item"><span class="tool-dot done"></span><span>computer_use — screenshot</span></div>
+                <div class="tool-item"><span class="tool-dot done"></span><span>bash — ls ~/Desktop</span></div>
+                <div class="tool-item"><span class="tool-dot done"></span><span>write_file report.md</span></div>
+              </div>
+            </div>
+            I've completed the analysis and saved the report to your Desktop.
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Status indicators -->
+      <div class="section-header">
+        <h2 class="section-title">Status and input states</h2>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Desktop status (offline / disconnected)</span>
+          <span class="component-source">Chat.tsx — empty state</span>
+        </div>
+        <div class="component-canvas chat-canvas" style="min-height:120px;display:flex;align-items:center;justify-content:center">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+            <div style="width:12px;height:12px;border-radius:9999px;background:#ef4444;animation:pulse-rec 1.5s ease-in-out infinite"></div>
+            <span style="font-size:13px;color:#737373;text-align:center">Desktop offline — open Ara on your computer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Voice input button (default)</span>
+          <span class="component-source">Chat.tsx — voice mode (default)</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div style="max-width:320px">
+            <button class="chat-hold-btn">
+              <svg style="width:18px;height:18px;flex-shrink:0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1a4 4 0 0 0-4 4v7a4 4 0 0 0 8 0V5a4 4 0 0 0-4-4zm-1 18.93A7.01 7.01 0 0 1 5 13h2a5 5 0 0 0 10 0h2a7.01 7.01 0 0 1-6 6.93V22h3v2H8v-2h3v-2.07z"/>
+              </svg>
+              Hold to talk
+            </button>
+            <div style="text-align:center;margin-top:8px">
+              <span style="font-size:11px;color:#525252">Type instead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Voice button — recording state</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div style="max-width:320px">
+            <button class="chat-hold-btn" style="background:#ef4444;color:#fff;animation:pulse-rec 1.5s ease-in-out infinite">
+              <svg style="width:18px;height:18px;flex-shrink:0" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="6" width="12" height="12" rx="2"/>
+              </svg>
+              Release to stop
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Text input mode</span>
+          <span class="component-source">Chat.tsx — showTextInput=true</span>
+        </div>
+        <div class="component-canvas chat-canvas">
+          <div style="max-width:320px">
+            <div class="chat-input-area" style="padding:0;border:none">
+              <div style="display:flex;gap:8px;align-items:flex-end">
+                <textarea class="chat-textarea" placeholder="Message..." style="flex:1;resize:none"></textarea>
+                <button style="background:#fff;color:#000;border:none;border-radius:9999px;padding:0 16px;height:40px;font-size:13px;font-weight:500;cursor:pointer;flex-shrink:0">Send</button>
+              </div>
+              <div style="text-align:center;margin-top:8px">
+                <span style="font-size:11px;color:#525252">Switch to voice</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+function toggleTools(btn) {
+  const chevron = btn.querySelector('.tool-chevron');
+  const list = btn.parentElement.querySelector('.tool-list');
+  chevron.classList.toggle('expanded');
+  list.classList.toggle('open');
+}
+</script>
+</body>
+</html>

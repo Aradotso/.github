@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HQ Admin — Ara Design System</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="components.css" />
+</head>
+<body>
+<div class="showcase-layout">
+  <nav class="showcase-sidebar">
+    <a class="sidebar-logo" href="index.html">
+      <span class="sidebar-logo-mark">A</span>
+      <span class="sidebar-logo-text">Design System</span>
+    </a>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Foundation</div>
+      <ul class="sidebar-nav">
+        <li><a href="tokens.html"><span class="nav-icon">🎨</span> Tokens</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Components</div>
+      <ul class="sidebar-nav">
+        <li><a href="notch.html"><span class="nav-icon">⌨️</span> Notch</a></li>
+        <li><a href="chat.html"><span class="nav-icon">💬</span> Chat</a></li>
+        <li><a href="landing.html"><span class="nav-icon">🌐</span> Landing</a></li>
+        <li><a href="hq.html" class="active"><span class="nav-icon">🗄️</span> HQ Admin</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="index.html"><span class="nav-icon">🏠</span> Overview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="showcase-main">
+    <div class="showcase-topbar">
+      <span class="topbar-title">HQ Admin</span>
+      <span class="topbar-badge">hq</span>
+    </div>
+
+    <div class="showcase-content">
+      <div class="section-header">
+        <h1 class="section-title">HQ admin components</h1>
+        <p class="section-description">Table, form, badge, and card patterns from the HQ local ops dashboard (<code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">hq/public/</code>). Always dark-only surface.</p>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Stat cards</span>
+          <span class="component-source">hq/public/billing/index.html — .card</span>
+        </div>
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42;padding:16px">
+          <div class="hq-cards" style="padding:0">
+            <div class="hq-card">
+              <p class="hq-card-label">Monthly revenue</p>
+              <p class="hq-card-value">$4,821</p>
+            </div>
+            <div class="hq-card">
+              <p class="hq-card-label">Active users</p>
+              <p class="hq-card-value">1,204</p>
+            </div>
+            <div class="hq-card">
+              <p class="hq-card-label">Pro subscribers</p>
+              <p class="hq-card-value">312</p>
+            </div>
+            <div class="hq-card">
+              <p class="hq-card-label">Conversations</p>
+              <p class="hq-card-value">38,491</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Data table -->
+      <div class="section-header">
+        <h2 class="section-title">Data table</h2>
+        <p class="section-description">Table pattern used for billing payers and conversation lists. Sourced from <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">hq/public/billing/styles.css</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Billing table</span>
+          <span class="component-source">hq/public/billing/index.html — .data-table</span>
+        </div>
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42;padding:0;overflow:hidden">
+          <div class="hq-panel" style="border:none;border-radius:0">
+            <div class="hq-panel-head">
+              <h2>Recent payers</h2>
+              <span class="count">14 users</span>
+            </div>
+            <div class="hq-table-wrap">
+              <table class="hq-table">
+                <thead>
+                  <tr>
+                    <th>When</th>
+                    <th>Amount</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Plan</th>
+                    <th>Promo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="muted">2m ago</td>
+                    <td>$12.00</td>
+                    <td>Jordan Lee</td>
+                    <td class="mono">jordan@example.com</td>
+                    <td><span class="badge badge-pro">Pro</span></td>
+                    <td class="muted">—</td>
+                  </tr>
+                  <tr>
+                    <td class="muted">18m ago</td>
+                    <td>$29.00</td>
+                    <td>Sam Park</td>
+                    <td class="mono">sam@example.com</td>
+                    <td><span class="badge badge-ultra">Ultra</span></td>
+                    <td class="mono">LAUNCH30</td>
+                  </tr>
+                  <tr>
+                    <td class="muted">1h ago</td>
+                    <td>$12.00</td>
+                    <td>Alex Chen</td>
+                    <td class="mono">alex@example.com</td>
+                    <td><span class="badge badge-pro">Pro</span></td>
+                    <td class="muted">—</td>
+                  </tr>
+                  <tr>
+                    <td class="muted">3h ago</td>
+                    <td>$29.00</td>
+                    <td>Riley Morgan</td>
+                    <td class="mono">riley@example.com</td>
+                    <td><span class="badge badge-ultra">Ultra</span></td>
+                    <td class="muted">—</td>
+                  </tr>
+                  <tr>
+                    <td class="muted">1d ago</td>
+                    <td>$0.00</td>
+                    <td>Casey Kim</td>
+                    <td class="mono">casey@example.com</td>
+                    <td><span class="badge badge-free">Free</span></td>
+                    <td class="muted">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Badges -->
+      <div class="section-header">
+        <h2 class="section-title">Badges</h2>
+        <p class="section-description">Status and plan badges used across the HQ dashboard.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Plan badges</span>
+        </div>
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <span class="badge badge-ultra">Ultra</span>
+            <span class="badge badge-pro">Pro</span>
+            <span class="badge badge-free">Free</span>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px">
+            <span class="badge badge-success">Active</span>
+            <span class="badge badge-warn">Trialing</span>
+            <span class="badge badge-error">Churned</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Admin form -->
+      <div class="section-header">
+        <h2 class="section-title">Admin form</h2>
+        <p class="section-description">Lookup form used to change a user's plan. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">hq/public/billing/index.html → #adminPanel</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-block-header">
+          <span class="component-name">Change user plan</span>
+          <span class="component-source">hq/public/billing — #adminLookupForm</span>
+        </div>
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42;padding:0;overflow:hidden">
+          <div class="hq-panel" style="border:none;border-radius:0">
+            <div class="hq-panel-head">
+              <h2>Change user plan</h2>
+              <span class="count" style="font-size:11px;color:#8c8c90">writes to Stripe + Supabase · localhost-only</span>
+            </div>
+            <div style="padding:14px">
+              <div class="hq-form" style="margin-bottom:14px">
+                <input class="hq-input" type="text" placeholder="phone (e.g. +134****9900) or user UUID" />
+                <button class="hq-btn">Lookup</button>
+              </div>
+
+              <!-- Result state (after lookup) -->
+              <div style="border:1px solid #3d3e42;border-radius:6px;padding:14px">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px">
+                  <div>
+                    <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8c8c90;margin-bottom:8px">Supabase</div>
+                    <dl style="margin:0;display:grid;gap:4px">
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">User</dt><dd style="font-size:11px;font-family:var(--font-mono);color:#b8b8bc;margin:0">uuid-1234-5678</dd></div>
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">Plan</dt><dd style="margin:0"><span class="badge badge-pro">Pro</span></dd></div>
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">Email</dt><dd style="font-size:11px;font-family:var(--font-mono);color:#b8b8bc;margin:0">sam@example.com</dd></div>
+                    </dl>
+                  </div>
+                  <div>
+                    <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:#8c8c90;margin-bottom:8px">Stripe</div>
+                    <dl style="margin:0;display:grid;gap:4px">
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">Sub ID</dt><dd style="font-size:11px;font-family:var(--font-mono);color:#b8b8bc;margin:0">sub_abc123</dd></div>
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">Status</dt><dd style="margin:0"><span class="badge badge-success">Active</span></dd></div>
+                      <div style="display:flex;gap:8px"><dt style="font-size:11px;color:#8c8c90;width:60px;flex-shrink:0">Renews</dt><dd style="font-size:11px;color:#b8b8bc;margin:0">Jul 11, 2026</dd></div>
+                    </dl>
+                  </div>
+                </div>
+                <!-- Plan change -->
+                <div style="border-top:1px solid #3d3e42;padding-top:14px">
+                  <div style="font-size:11px;color:#8c8c90;margin-bottom:8px">Set plan</div>
+                  <div style="display:flex;gap:8px;flex-wrap:wrap">
+                    <button class="hq-btn" style="border-color:#5a5b60;color:#f5f5f6">→ Free</button>
+                    <button class="hq-btn" style="border-color:#6366f1;color:#a5b4fc">→ Pro</button>
+                    <button class="hq-btn" style="border-color:#a855f7;color:#d8b4fe">→ Ultra</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Conversations table -->
+      <div class="section-header">
+        <h2 class="section-title">Conversations table</h2>
+        <p class="section-description">Conversation list with status, timestamp, and drilldown. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">hq/public/conversations/</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42;padding:0;overflow:hidden">
+          <div class="hq-panel" style="border:none;border-radius:0">
+            <div class="hq-panel-head">
+              <h2>Recent conversations</h2>
+              <span class="count">89 sessions</span>
+            </div>
+            <div class="hq-table-wrap">
+              <table class="hq-table">
+                <thead>
+                  <tr>
+                    <th>Session</th>
+                    <th>User</th>
+                    <th>Messages</th>
+                    <th>Model</th>
+                    <th>Status</th>
+                    <th>Started</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mono">sess_abc123</td>
+                    <td>jordan@example.com</td>
+                    <td>24</td>
+                    <td class="mono">claude-opus-4</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td class="muted">3m ago</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">sess_def456</td>
+                    <td>sam@example.com</td>
+                    <td>7</td>
+                    <td class="mono">claude-sonnet-4</td>
+                    <td><span class="badge badge-warn">Idle</span></td>
+                    <td class="muted">45m ago</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">sess_ghi789</td>
+                    <td>alex@example.com</td>
+                    <td>51</td>
+                    <td class="mono">claude-opus-4</td>
+                    <td><span class="badge" style="background:rgba(115,115,115,0.15);color:#a3a3a3;border:1px solid rgba(115,115,115,0.3)">Ended</span></td>
+                    <td class="muted">2h ago</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">sess_jkl012</td>
+                    <td>riley@example.com</td>
+                    <td>12</td>
+                    <td class="mono">claude-sonnet-4</td>
+                    <td><span class="badge badge-error">Error</span></td>
+                    <td class="muted">4h ago</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- App card grid (home page pattern) -->
+      <div class="section-header">
+        <h2 class="section-title">App card grid</h2>
+        <p class="section-description">Navigation cards from the HQ home page. Source: <code style="font-family:var(--font-mono);font-size:12px;background:var(--color-bg-alt);padding:2px 5px;border-radius:4px">hq/public/index.html</code>.</p>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas dark" style="background:#1a1b1d;border-color:#3d3e42">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px">
+            <a href="#" style="text-decoration:none;color:#f5f5f6;border:1px solid #5a5b60;border-radius:8px;background:#232427;padding:14px 16px;display:grid;gap:6px;transition:background 120ms ease">
+              <h3 style="margin:0;font-size:14px;font-weight:600">Conversations</h3>
+              <p style="margin:0;color:#b8b8bc;font-size:12px;line-height:1.5">Recent LINQ sessions — chat list and message drilldown.</p>
+              <span style="color:#8c8c90;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em">Open /conversations</span>
+            </a>
+            <a href="#" style="text-decoration:none;color:#f5f5f6;border:1px solid #3d3e42;border-radius:8px;background:#232427;padding:14px 16px;display:grid;gap:6px">
+              <h3 style="margin:0;font-size:14px;font-weight:600">Billing</h3>
+              <p style="margin:0;color:#b8b8bc;font-size:12px;line-height:1.5">Recent Stripe payers and active promo codes.</p>
+              <span style="color:#8c8c90;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em">Open /billing</span>
+            </a>
+            <a href="#" style="text-decoration:none;color:#f5f5f6;border:1px solid #3d3e42;border-radius:8px;background:#232427;padding:14px 16px;display:grid;gap:6px">
+              <h3 style="margin:0;font-size:14px;font-weight:600">User usage</h3>
+              <p style="margin:0;color:#b8b8bc;font-size:12px;line-height:1.5">Per-user spend, builds, and messages from Supabase.</p>
+              <span style="color:#8c8c90;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.04em">Open /usage</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Topbar -->
+      <div class="section-header">
+        <h2 class="section-title">HQ topbar</h2>
+      </div>
+
+      <div class="component-block">
+        <div class="component-canvas dark" style="padding:0;overflow:hidden;background:#1a1b1d;border-color:#3d3e42">
+          <div class="hq-topbar">
+            <div>
+              <h1 class="hq-topbar-title">Billing</h1>
+              <p class="hq-topbar-sub">Recent Stripe payers and active promo codes — text.ara.so</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <button class="hq-btn">Refresh</button>
+              <span style="font-size:11px;color:#8c8c90;font-variant-numeric:tabular-nums">Last updated: just now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
