@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" role="img" aria-label="Ara">
+  <!-- Icon mark on dark background -->
+  <rect x="0" y="0" width="40" height="40" rx="8" fill="#FFFFFF"/>
+  <path d="M20 8 L32 32 H26 L20 18 L14 32 H8 Z" fill="#0F0F0F"/>
+  <rect x="13" y="24" width="14" height="3" rx="1.5" fill="#FFFFFF"/>
+  <!-- Wordmark -->
+  <text x="50" y="27" font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="600" fill="#FFFFFF" letter-spacing="-0.5">Ara</text>
+</svg>
