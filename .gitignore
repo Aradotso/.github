@@ -1,0 +1,49 @@
+# Node
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+dist/
+build/
+.next/
+out/
+.vercel
+*.tsbuildinfo
+.cache/
+
+# Swift / Xcode
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+.build/
+*.o
+*.d
+*.swp
+.DS_Store
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+
+# Supabase
+supabase/.branches/
+supabase/.temp/
+
+# Misc
+.turbo/
+*.log
+.idea/
+.vscode/settings.json
