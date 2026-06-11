@@ -11,3 +11,7 @@
 <p align="center">
   <img src="./logo.png" alt="Ara" width="120" />
 </p>
+
+<p align="center">
+  <a href="../branding/BRAND.md">Brand guidelines &amp; assets →</a>
+</p>

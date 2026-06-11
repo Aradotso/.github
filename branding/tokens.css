@@ -1,0 +1,55 @@
+/**
+ * Ara Design Tokens
+ * Auto-include in any web project to get brand-consistent colours and type.
+ */
+
+:root {
+  /* ── Colour: Primary ── */
+  --ara-black:        #0F0F0F;
+  --ara-white:        #FFFFFF;
+
+  /* ── Colour: Surface ── */
+  --ara-surface-100:  #F5F5F5;
+  --ara-surface-200:  #E8E8E8;
+
+  /* ── Colour: Ink ── */
+  --ara-ink-500:      #6B6B6B;
+  --ara-ink-700:      #2E2E2E;
+
+  /* ── Colour: Accent ── */
+  --ara-accent:       #2563EB;
+  --ara-accent-hover: #1D4ED8;
+
+  /* ── Colour: Semantic ── */
+  --ara-success:      #16A34A;
+  --ara-destructive:  #DC2626;
+
+  /* ── Typography ── */
+  --ara-font-sans:    'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ara-font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* ── Type scale ── */
+  --ara-text-display: 2.5rem;   /* 40px */
+  --ara-text-h1:      2rem;     /* 32px */
+  --ara-text-h2:      1.5rem;   /* 24px */
+  --ara-text-h3:      1.25rem;  /* 20px */
+  --ara-text-body:    1rem;     /* 16px */
+  --ara-text-small:   0.875rem; /* 14px */
+  --ara-text-label:   0.75rem;  /* 12px */
+
+  /* ── Spacing ── */
+  --ara-radius-sm:    4px;
+  --ara-radius-md:    8px;
+  --ara-radius-lg:    12px;
+  --ara-radius-pill:  9999px;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ara-surface-100:  #111111;
+    --ara-surface-200:  #1F1F1F;
+    --ara-ink-500:      #888888;
+    --ara-ink-700:      #E8E8E8;
+  }
+}
