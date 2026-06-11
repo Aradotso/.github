@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-hot-pink: #FF2D78;
+  --color-ara-pink: #EC4899;
+  --color-ara-rose: #FB7185;
+  --color-ara-black: #0A0A0A;
+  --color-bg: #0A0A0A;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(236, 72, 153, 0.12), transparent),
+    radial-gradient(ellipse 40% 30% at 85% 20%, rgba(255, 45, 120, 0.06), transparent);
+}
+
+/* Diagonal stripe aeroplane texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 60px,
+    rgba(255, 255, 255, 0.012) 60px,
+    rgba(255, 255, 255, 0.012) 61px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 40%, #fb7185 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+/* Pink glow button */
+.btn-pink {
+  background: linear-gradient(135deg, #FF2D78, #EC4899);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(255, 45, 120, 0.35);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-pink:hover {
+  box-shadow: 0 0 32px rgba(255, 45, 120, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-pink:active {
+  transform: translateY(0);
+}
