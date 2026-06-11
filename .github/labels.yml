@@ -1,0 +1,9 @@
+# GitHub issue labels used by automated workflows.
+# Apply with: gh label create --repo Aradotso/.github "profile-lint" --color "e4e669" --description "Automated org profile drift alert"
+#
+# This file is documentation only; labels must be created via the GitHub UI or CLI before
+# the profile-lint workflow can apply them to issues.
+
+- name: "profile-lint"
+  color: "e4e669"
+  description: "Automated org profile drift alert"
