@@ -11,3 +11,7 @@
 <p align="center">
   <img src="./logo.png" alt="Ara" width="120" />
 </p>
+
+## What's Next
+
+Ara's public roadmap is available in [ROADMAP.md](../ROADMAP.md). It is reviewed quarterly so users and contributors can track what we're focused on next.
