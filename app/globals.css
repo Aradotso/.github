@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ── Pink / Pastel Design Tokens ─────────────────────────────────────────── */
+:root {
+  /* Pinks */
+  --pink-blush: #ffd6e7;
+  --pink-soft: #ffb3ce;
+  --pink-warm: #ff85b3;
+  --pink-hot: #ff3d9a;
+  --pink-deep: #c0006e;
+
+  /* Roses */
+  --rose-mist: #ffe4e8;
+  --rose-petal: #ffa5b4;
+  --rose-bloom: #f43f5e;
+
+  /* Purples / Lavender */
+  --lavender: #e9d5ff;
+  --lavender-soft: #d8b4fe;
+  --lavender-deep: #a855f7;
+  --lilac: #f3e8ff;
+
+  /* Fuchsia */
+  --fuchsia-blush: #fce7f3;
+  --fuchsia-mid: #e879f9;
+  --fuchsia-hot: #c026d3;
+
+  /* Neutrals with a pink tint */
+  --pink-white: #fff5f9;
+  --pink-gray: #f9a8d4;
+
+  /* Typography */
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--pink-white);
+  color: #1a0a10;
+}
+
+/* ── Focus ring ──────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--pink-hot);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Selection ───────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--pink-blush);
+  color: var(--pink-deep);
+}
