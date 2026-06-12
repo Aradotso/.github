@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./hero.png" alt="Ara" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./hero-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./hero-light.png">
+    <img src="./hero.png" alt="Ara" />
+  </picture>
 </p>
 
 <h1 align="center">Ara</h1>
@@ -9,5 +13,9 @@
 </p>
 
 <p align="center">
-  <img src="./logo.png" alt="Ara" width="120" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./logo-light.png">
+    <img src="./logo.png" alt="Ara" width="120" />
+  </picture>
 </p>
