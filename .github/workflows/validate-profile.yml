@@ -1,0 +1,49 @@
+name: Validate Org Profile
+
+on:
+  schedule:
+    # Runs daily at 08:00 UTC
+    - cron: "0 8 * * *"
+  push:
+    paths:
+      - "profile/**"
+      - ".github/workflows/validate-profile.yml"
+      - "scripts/validate_profile.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  validate:
+    name: Validate org profile
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pillow requests
+
+      - name: Run profile validator
+        id: validate
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/validate_profile.py
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: validation-report.md
+          retention-days: 30
