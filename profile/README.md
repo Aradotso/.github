@@ -5,7 +5,35 @@
 <h1 align="center">Ara</h1>
 
 <p align="center">
-  <a href="https://www.ara.so">ara.so</a>
+  The agent-building agent. Design, run, and refine automated agents — right on your Mac.
+</p>
+
+<p align="center">
+  <a href="https://ara.so">ara.so</a> &nbsp;·&nbsp;
+  <a href="https://ara.so/download">Download</a> &nbsp;·&nbsp;
+  <a href="https://docs.ara.so">Docs</a> &nbsp;·&nbsp;
+  <a href="https://ara.so/blog">Blog</a> &nbsp;·&nbsp;
+  <a href="https://x.com/aradotso">𝕏</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/company/aradotso">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://github.com/orgs/Aradotso/discussions">Discussions</a>
+</p>
+
+<p align="center">
+  <a href="https://www.ycombinator.com/companies/ara">
+    <img src="https://img.shields.io/badge/Y%20Combinator-S26-orange?style=flat-square&logo=ycombinator" alt="YC S26" />
+  </a>
+</p>
+
+<br />
+
+Software development is changing faster than the tools built to support it. Most developer tools still assume the bottleneck is writing code — but with AI, that bottleneck has shifted upstream to planning: deciding what to build, breaking it into tasks, and keeping the whole system coherent as it evolves.
+
+Ara is built for that world. Our agents handle execution while you focus on high-level direction — setting goals, reviewing outcomes, and steering. Proactive planning is the missing layer in AI-assisted development. Ara's agents get ahead of the work: monitoring your repo, surfacing what needs attention, proposing what to tackle next, and executing autonomously inside isolated workspaces.
+
+Founded by [Sven Myhre](https://github.com/svemyh) and Adi Singh, backed by Y Combinator (S26).
+
+<p align="center">
+  <a href="https://ara.so/download">⬇️ Download for free →</a>
 </p>
 
 <p align="center">
