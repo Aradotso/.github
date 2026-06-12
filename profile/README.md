@@ -5,7 +5,12 @@
 <h1 align="center">Ara</h1>
 
 <p align="center">
-  <a href="https://www.ara.so">ara.so</a>
+  The agent-building agent. Design, run, and refine AI agents on your Mac — without leaving your workflow.
+</p>
+
+<p align="center">
+  <a href="https://www.ara.so">ara.so</a> &nbsp;·&nbsp;
+  <a href="https://github.com/Aradotso">github.com/Aradotso</a>
 </p>
 
 <p align="center">
