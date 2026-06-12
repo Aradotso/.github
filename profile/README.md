@@ -11,3 +11,7 @@
 <p align="center">
   <img src="./logo.png" alt="Ara" width="120" />
 </p>
+
+## Security
+
+For information on reporting vulnerabilities and our coordinated disclosure process, see our [Security Policy](../SECURITY.md).
