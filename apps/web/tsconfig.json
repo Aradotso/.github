@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "plugins": [{ "name": "next" }]
+  },
+  "references": [
+    { "path": "../../packages/types" },
+    { "path": "../../packages/ui" },
+    { "path": "../../packages/api-client" }
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts"],
+  "exclude": ["node_modules"]
+}
