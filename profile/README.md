@@ -9,5 +9,9 @@
 </p>
 
 <p align="center">
-  <img src="./logo.png" alt="Ara" width="120" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./logo.png" />
+    <source media="(prefers-color-scheme: light)" srcset="./logo-dark.png" />
+    <img src="./logo-dark.png" alt="Ara" width="120" />
+  </picture>
 </p>
