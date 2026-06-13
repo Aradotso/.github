@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize:profile-images": "node scripts/optimize-profile-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.33.5"
+  }
+}

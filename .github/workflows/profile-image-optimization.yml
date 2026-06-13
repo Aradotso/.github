@@ -1,0 +1,163 @@
+name: Optimize profile images
+
+on:
+  pull_request:
+    paths:
+      - 'profile/**/*.png'
+      - 'profile/**/*.jpg'
+      - 'profile/**/*.jpeg'
+      - '.github/workflows/profile-image-optimization.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'scripts/optimize-profile-images.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: profile-image-optimization-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  optimize:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    name: ${{ matrix.compression }} compression
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        compression: [balanced, aggressive]
+        include:
+          - compression: balanced
+            apply: true
+            apply_arg: --apply
+          - compression: aggressive
+            apply: false
+            apply_arg: ''
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Detect changed profile images
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            base_ref="origin/${{ github.base_ref }}"
+            changed_files=$(git diff --name-only "$base_ref...HEAD" -- 'profile/**/*.png' 'profile/**/*.jpg' 'profile/**/*.jpeg' || true)
+          else
+            changed_files=$(git ls-files 'profile/*.png' 'profile/*.jpg' 'profile/*.jpeg')
+          fi
+
+          printf '%s\n' "$changed_files" | sed '/^$/d' > changed-profile-images.txt
+          {
+            echo 'files<<EOF'
+            cat changed-profile-images.txt
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+          if [[ ! -s changed-profile-images.txt ]]; then
+            echo 'has_changes=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'has_changes=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install optimizers
+        if: steps.changes.outputs.has_changes == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pngquant oxipng
+          npm install
+
+      - name: Optimize changed images
+        if: steps.changes.outputs.has_changes == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/optimize-profile-images.mjs \
+            --level "${{ matrix.compression }}" \
+            --min-savings 20 \
+            ${{ matrix.apply_arg }} \
+            --changed-files "${{ steps.changes.outputs.files }}"
+
+      - name: Upload size report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-image-optimization-${{ matrix.compression }}
+          path: profile-image-optimization-${{ matrix.compression }}.md
+          if-no-files-found: ignore
+
+      - name: Commit optimized profile images
+        if: steps.changes.outputs.has_changes == 'true' && matrix.apply
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f profile-image-optimization-*.md changed-profile-images.txt
+          if git diff --quiet -- profile; then
+            echo 'No profile image optimizations to commit.'
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add profile
+          git commit -m 'Optimize profile image assets'
+          git push
+
+  comment:
+    if: github.event_name == 'pull_request'
+    needs: optimize
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Download size reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: profile-image-optimization-*
+          merge-multiple: true
+
+      - name: Comment file-size diffs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- profile-image-optimization-report -->';
+            const files = fs.readdirSync('.').filter((file) => /^profile-image-optimization-.*\.md$/.test(file)).sort();
+            const body = [
+              marker,
+              'Profile image optimization report',
+              '',
+              files.length
+                ? files.map((file) => fs.readFileSync(file, 'utf8').trim()).join('\n\n')
+                : 'No changed profile images were detected.',
+            ].join('\n');
+
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.rest.issues.listComments({ owner, repo, issue_number, per_page: 100 });
+            const existing = comments.data.find((comment) => comment.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
