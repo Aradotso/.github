@@ -1,0 +1,15 @@
+# Ara organization defaults
+# Repository-specific CODEOWNERS files may override these defaults.
+
+* @Aradotso/maintainers
+
+# Governance, legal, and security baseline
+/LICENSE @Aradotso/maintainers
+/LEGAL.md @Aradotso/maintainers
+/SECURITY.md @Aradotso/maintainers
+/CONTRIBUTING.md @Aradotso/maintainers
+/CODE_OF_CONDUCT.md @Aradotso/maintainers
+/CODEOWNERS @Aradotso/maintainers
+
+# Organization profile
+/profile/ @Aradotso/maintainers
