@@ -5,7 +5,7 @@
 <h1 align="center">Ara</h1>
 
 <p align="center">
-  <a href="https://www.ara.so">ara.so</a>
+  <a href="https://www.ara.so">ara.so</a> · <a href="../branding/QUICK_START.md">Brand quick start</a>
 </p>
 
 <p align="center">
