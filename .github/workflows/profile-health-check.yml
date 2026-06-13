@@ -1,0 +1,36 @@
+name: profile-health-check
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "profile/**"
+      - "scripts/profile_health_check.py"
+      - ".github/workflows/profile-health-check.yml"
+  push:
+    paths:
+      - "profile/**"
+      - "scripts/profile_health_check.py"
+      - ".github/workflows/profile-health-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health-check:
+    name: profile-health-check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run profile health check
+        run: python scripts/profile_health_check.py
