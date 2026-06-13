@@ -11,3 +11,7 @@
 <p align="center">
   <img src="./logo.png" alt="Ara" width="120" />
 </p>
+
+## What's Next
+
+We maintain a public-facing [roadmap](../ROADMAP.md) so users and contributors can see where Ara is headed. It is reviewed quarterly and kept free of internal-only details.
