@@ -1,0 +1,12 @@
+# Default reviewers for Ara organization profile and governance files.
+* @svemyh
+
+# Public profile and brand assets.
+/profile/ @svemyh
+
+# Governance and legal defaults.
+/SECURITY.md @svemyh
+/CONTRIBUTING.md @svemyh
+/CODE_OF_CONDUCT.md @svemyh
+/LICENSE @svemyh
+/LEGAL.md @svemyh
