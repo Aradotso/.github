@@ -1,0 +1,1241 @@
+{
+  "existing_tracking_issues": [
+    {
+      "html_url": "https://github.com/Aradotso/.github/issues/1",
+      "repository_url": "https://api.github.com/repos/Aradotso/.github",
+      "title": "Close GitHub security baseline gaps"
+    }
+  ],
+  "generated_on": "2026-06-13",
+  "org": "Aradotso",
+  "org_defaults": {
+    "advanced_security_enabled_for_new_repositories": false,
+    "dependabot_alerts_enabled_for_new_repositories": false,
+    "dependabot_security_updates_enabled_for_new_repositories": false,
+    "secret_scanning_enabled_for_new_repositories": false,
+    "secret_scanning_push_protection_enabled_for_new_repositories": false
+  },
+  "outside_collaborators": [],
+  "outside_collaborators_error": null,
+  "owners": [
+    "adisinghstudent",
+    "svemyh"
+  ],
+  "owners_error": null,
+  "repo_findings": [
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/.github",
+      "gaps": [
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/.github",
+      "name": ".github",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": true,
+        "main_protected": true,
+        "required_approving_review_count": 1,
+        "required_status_check_contexts": [
+          "profile-health-check"
+        ],
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": true,
+        "requires_status_checks": true
+      },
+      "protection_error": null,
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/App",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/App",
+      "name": "App",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/Ara",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/Ara",
+      "name": "Ara",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/Ara-backend",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/Ara-backend",
+      "name": "Ara-backend",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/Astack",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/Astack",
+      "name": "Astack",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": "CODEOWNERS",
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/OpenAra",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS exists but code-owner reviews are not required"
+      ],
+      "html_url": "https://github.com/Aradotso/OpenAra",
+      "name": "OpenAra",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/Swift",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/Swift",
+      "name": "Swift",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ai-agent-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/ai-agent-skills",
+      "name": "ai-agent-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": true,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-connectors",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-connectors",
+      "name": "ara-connectors",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-cua",
+      "gaps": [
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-cua",
+      "name": "ara-cua",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": true,
+        "main_protected": true,
+        "required_approving_review_count": 1,
+        "required_status_check_contexts": [
+          "AraWeb API",
+          "AraWeb ara.so",
+          "chat.ara.so",
+          "hq"
+        ],
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": true,
+        "requires_status_checks": true
+      },
+      "protection_error": null,
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "master",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-drive",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-drive",
+      "name": "ara-drive",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not found (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-examples",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-examples",
+      "name": "ara-examples",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-plugin",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-plugin",
+      "name": "ara-plugin",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara-python-sdk",
+      "gaps": [
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/ara-python-sdk",
+      "name": "ara-python-sdk",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": true,
+        "required_approving_review_count": null,
+        "required_status_check_contexts": [],
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": null,
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/ara.engineer",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/ara.engineer",
+      "name": "ara.engineer",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/bmux",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/bmux",
+      "name": "bmux",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/claude-code-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/claude-code-skills",
+      "name": "claude-code-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/clipfarming",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/clipfarming",
+      "name": "clipfarming",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/codex-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/codex-skills",
+      "name": "codex-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/content-tiktok-carousels",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/content-tiktok-carousels",
+      "name": "content-tiktok-carousels",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/coshot",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/coshot",
+      "name": "coshot",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/data-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/data-skills",
+      "name": "data-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/design-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/design-skills",
+      "name": "design-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/devtools-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/devtools-skills",
+      "name": "devtools-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/email-outreach",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/email-outreach",
+      "name": "email-outreach",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/hermes-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/hermes-skills",
+      "name": "hermes-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/hq",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/hq",
+      "name": "hq",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/image.ara.so",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/image.ara.so",
+      "name": "image.ara.so",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/marketing-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/marketing-skills",
+      "name": "marketing-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/mcp-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/mcp-skills",
+      "name": "mcp-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/picoclaw",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/picoclaw",
+      "name": "picoclaw",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/routines",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/routines",
+      "name": "routines",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/security-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/security-skills",
+      "name": "security-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "disabled_or_inaccessible",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/text.ara.so",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing",
+        "Dependabot alerts disabled/inaccessible",
+        "secret scanning disabled",
+        "secret scanning push protection disabled"
+      ],
+      "html_url": "https://github.com/Aradotso/text.ara.so",
+      "name": "text.ara.so",
+      "private": true,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "disabled",
+      "secret_scanning_push_protection": "disabled"
+    },
+    {
+      "admin_collaborators": [
+        "adisinghstudent",
+        "svemyh"
+      ],
+      "admin_collaborators_error": null,
+      "archived": false,
+      "codeowners": null,
+      "default_branch": "main",
+      "dependabot_alerts": "enabled",
+      "dependabot_security_updates": "enabled",
+      "full_name": "Aradotso/trending-skills",
+      "gaps": [
+        "main branch protection missing/inaccessible",
+        "main does not require PR review",
+        "main does not require status checks",
+        "main does not dismiss stale reviews",
+        "CODEOWNERS missing"
+      ],
+      "html_url": "https://github.com/Aradotso/trending-skills",
+      "name": "trending-skills",
+      "private": false,
+      "protection": {
+        "dismisses_stale_reviews": false,
+        "main_protected": false,
+        "requires_code_owner_reviews": false,
+        "requires_pr_review": false,
+        "requires_status_checks": false
+      },
+      "protection_error": "gh: Branch not protected (HTTP 404)",
+      "secret_scanning": "enabled",
+      "secret_scanning_push_protection": "enabled"
+    }
+  ],
+  "repos_error": null
+}
