@@ -9,8 +9,6 @@ on:
       - "scripts/profile_health_check.py"
       - ".github/workflows/profile-health-check.yml"
   push:
-    branches:
-      - main
     paths:
       - "profile/**"
       - "scripts/profile_health_check.py"
