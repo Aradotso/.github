@@ -1,0 +1,118 @@
+name: Optimize profile images
+
+on:
+  pull_request:
+    paths:
+      - 'profile/**/*.png'
+      - 'profile/**/*.jpg'
+      - 'profile/**/*.jpeg'
+      - 'profile/**/*.webp'
+      - 'profile/**/*.avif'
+      - '.github/workflows/optimize-profile-images.yml'
+      - 'scripts/optimize-profile-images.mjs'
+  push:
+    branches:
+      - main
+    paths:
+      - 'profile/**/*.png'
+      - 'profile/**/*.jpg'
+      - 'profile/**/*.jpeg'
+      - 'profile/**/*.webp'
+      - 'profile/**/*.avif'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: optimize-profile-images-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  optimize:
+    name: Optimize images (${{ matrix.compression.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        compression:
+          - name: aggressive
+            effort: '6'
+            png-quality: '60-90'
+            webp-quality: '76'
+            avif-quality: '45'
+          - name: balanced
+            effort: '4'
+            png-quality: '70-95'
+            webp-quality: '82'
+            avif-quality: '55'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install image tooling
+        run: |
+          npm install --no-save sharp@^0.34.0
+          sudo apt-get update
+          sudo apt-get install -y pngquant oxipng
+
+      - name: Detect changed profile images
+        id: changed
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+            profile/**/*.png
+            profile/**/*.jpg
+            profile/**/*.jpeg
+            profile/**/*.webp
+            profile/**/*.avif
+          separator: '\n'
+
+      - name: Optimize changed images
+        if: steps.changed.outputs.any_changed == 'true'
+        id: optimize
+        env:
+          CHANGED_IMAGES: ${{ steps.changed.outputs.all_changed_files }}
+          PNGQUANT_QUALITY: ${{ matrix.compression.png-quality }}
+          OXIPNG_EFFORT: ${{ matrix.compression.effort }}
+          WEBP_QUALITY: ${{ matrix.compression.webp-quality }}
+          AVIF_QUALITY: ${{ matrix.compression.avif-quality }}
+          MIN_SAVINGS_PERCENT: '20'
+          REPORT_PATH: profile-image-optimization-${{ matrix.compression.name }}.md
+          SUMMARY_JSON_PATH: profile-image-optimization-${{ matrix.compression.name }}.json
+        run: node scripts/optimize-profile-images.mjs
+
+      - name: Upload optimization report
+        if: steps.changed.outputs.any_changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-image-optimization-${{ matrix.compression.name }}
+          path: |
+            profile-image-optimization-${{ matrix.compression.name }}.md
+            profile-image-optimization-${{ matrix.compression.name }}.json
+          if-no-files-found: ignore
+
+      - name: Comment file-size diff on PR
+        if: github.event_name == 'pull_request' && steps.changed.outputs.any_changed == 'true'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: profile-image-optimization-${{ matrix.compression.name }}
+          path: profile-image-optimization-${{ matrix.compression.name }}.md
+
+      - name: Commit optimized assets
+        if: steps.changed.outputs.any_changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: '(profile) optimize profile images (${{ matrix.compression.name }})'
+          file_pattern: 'profile/* profile/**/*'
