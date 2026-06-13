@@ -1,0 +1,14 @@
+{
+  "name": "ara-profile-image-optimization",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize:profile-images": "node scripts/optimize-profile-images.mjs"
+  },
+  "dependencies": {
+    "oxipng-bin": "^1.0.0",
+    "pngquant-bin": "^9.0.0",
+    "sharp": "^0.35.1"
+  }
+}

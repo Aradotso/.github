@@ -1,0 +1,172 @@
+name: Optimize profile images
+
+on:
+  pull_request:
+    paths:
+      - 'profile/**/*.png'
+      - 'profile/**/*.jpg'
+      - 'profile/**/*.jpeg'
+      - 'scripts/optimize-profile-images.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/profile-image-optimization.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'profile/**/*.png'
+      - 'profile/**/*.jpg'
+      - 'profile/**/*.jpeg'
+      - 'scripts/optimize-profile-images.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/profile-image-optimization.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: profile-image-optimization-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect:
+    name: Detect changed profile images
+    runs-on: ubuntu-latest
+    outputs:
+      images: ${{ steps.changed.outputs.images }}
+      has_images: ${{ steps.changed.outputs.has_images }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed images
+        id: changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            base="origin/${{ github.base_ref }}"
+          else
+            base="${{ github.event.before }}"
+            if [[ -z "$base" || "$base" == "0000000000000000000000000000000000000000" ]]; then
+              base="HEAD~1"
+            fi
+          fi
+
+          mapfile -t images < <(git diff --name-only --diff-filter=ACMR "$base" HEAD -- \
+            'profile/**/*.png' \
+            'profile/**/*.jpg' \
+            'profile/**/*.jpeg' | sort -u)
+
+          if (( ${#images[@]} == 0 )); then
+            echo 'images=[]' >> "$GITHUB_OUTPUT"
+            echo 'has_images=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          printf '%s\n' "${images[@]}" | jq -R -s -c 'split("\n")[:-1]' | sed 's/^/images=/' >> "$GITHUB_OUTPUT"
+          echo 'has_images=true' >> "$GITHUB_OUTPUT"
+
+  optimize:
+    name: Optimize (${{ matrix.level }})
+    runs-on: ubuntu-latest
+    needs: detect
+    if: needs.detect.outputs.has_images == 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - level: balanced
+            webp_quality: 82
+            avif_quality: 52
+            pngquant_quality: 65-90
+            oxipng_level: 3
+            apply_arg: --apply
+          - level: aggressive
+            webp_quality: 76
+            avif_quality: 44
+            pngquant_quality: 55-82
+            oxipng_level: 5
+            apply_arg: ''
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Optimize changed images
+        env:
+          PROFILE_IMAGE_FILES: ${{ needs.detect.outputs.images }}
+        run: |
+          node scripts/optimize-profile-images.mjs \
+            --level '${{ matrix.level }}' \
+            --webp-quality '${{ matrix.webp_quality }}' \
+            --avif-quality '${{ matrix.avif_quality }}' \
+            --pngquant-quality '${{ matrix.pngquant_quality }}' \
+            --oxipng-level '${{ matrix.oxipng_level }}' \
+            --threshold 20 \
+            --report "profile-image-optimization-${{ matrix.level }}.md" \
+            ${{ matrix.apply_arg }}
+
+      - name: Upload size report
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-image-optimization-${{ matrix.level }}
+          path: profile-image-optimization-${{ matrix.level }}.md
+          if-no-files-found: error
+
+      - name: Commit optimized profile images
+        if: matrix.apply_arg == '--apply' && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: '(profile) optimize changed profile images'
+          file_pattern: 'profile/**/*'
+
+  comment:
+    name: Comment size diffs
+    runs-on: ubuntu-latest
+    needs: optimize
+    if: github.event_name == 'pull_request' && always() && needs.optimize.result != 'skipped'
+    steps:
+      - name: Download reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: profile-image-optimization-*
+          merge-multiple: true
+
+      - name: Upsert PR comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- profile-image-optimization-report -->';
+            const files = fs.readdirSync(process.cwd())
+              .filter((name) => /^profile-image-optimization-.+\.md$/.test(name))
+              .sort();
+            const reports = files.map((name) => fs.readFileSync(name, 'utf8').trim()).filter(Boolean);
+            const body = `${marker}\n${reports.join('\n\n') || 'No profile image optimization report was generated.'}`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const { data: comments } = await github.rest.issues.listComments({ owner, repo, issue_number, per_page: 100 });
+            const existing = comments.find((comment) => comment.user.type === 'Bot' && comment.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
