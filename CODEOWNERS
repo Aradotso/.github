@@ -1,0 +1,14 @@
+# Default maintainer routing for Ara organization repositories.
+# Repository-specific CODEOWNERS files may override these defaults.
+
+* @Aradotso/maintainers
+
+# Organization profile and governance baseline
+/profile/ @Aradotso/founders
+/README.md @Aradotso/founders
+/LICENSE @Aradotso/founders
+/LEGAL.md @Aradotso/founders
+/SECURITY.md @Aradotso/security
+/CONTRIBUTING.md @Aradotso/maintainers
+/CODE_OF_CONDUCT.md @Aradotso/maintainers
+/CODEOWNERS @Aradotso/founders
